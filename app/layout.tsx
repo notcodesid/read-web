@@ -9,16 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "read — every essay you saved, finally read.",
-  description:
-    "a quiet home for long-form essays on ios. save from anywhere, read offline in calm paperback typography, and lock out distractions until you finish.",
-  icons: {
-    icon: [
-      { url: "/icon.png", type: "image/png" },
-      { url: "/favicon.ico" },
-    ],
-    apple: "/icon.png",
-  },
+  title: "Read — A Minimalist Long-Form Essay & Article Reader",
+  description: "A minimal, distraction-free reading app for long-form ideas, essays, and curated thinkers. Emulating paperback reading with Screen Time focus lock and cloud sync.",
 };
 
 export default function RootLayout({

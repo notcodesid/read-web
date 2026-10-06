@@ -1,22 +1,26 @@
 "use client";
 
 import React from "react";
+import { BookMarked, Sparkles, Globe } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function AuthorsSection() {
   const shelfFeatures = [
     {
       name: "Clean slate",
+      icon: Sparkles,
       description:
         "No feeds or algorithmic noise. You start with a quiet, blank canvas that belongs entirely to you.",
     },
     {
       name: "Author shelves",
+      icon: BookMarked,
       description:
         "Save pieces from your favorite writers. Read automatically organizes them into dedicated shelves.",
     },
     {
       name: "Bring your canon",
+      icon: Globe,
       description:
         "Import from Safari, X, or Substack in one tap. Offline-ready with one-tap export anytime.",
     },
@@ -50,6 +54,7 @@ export default function AuthorsSection() {
         {/* 3 Shelf Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {shelfFeatures.map((item, idx) => {
+            const Icon = item.icon;
             return (
               <motion.div
                 key={item.name}
@@ -64,10 +69,17 @@ export default function AuthorsSection() {
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="bg-[#edeae1] rounded-3xl p-8 flex flex-col justify-between border border-black/[0.04] transition-all hover:bg-[#e6e2d6] hover:shadow-sm"
               >
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-normal text-[#111b14] tracking-tight">
-                    {item.name}
-                  </h3>
+                <div className="space-y-4">
+                  {/* Card Header */}
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-normal text-[#111b14] tracking-tight">
+                      {item.name}
+                    </h3>
+                    <div className="w-10 h-10 rounded-2xl bg-[#18181b] text-[#f5f4ef] flex items-center justify-center shadow-sm">
+                      <Icon className="w-4 h-4 stroke-[2]" />
+                    </div>
+                  </div>
+
                   <p className="text-[14.5px] text-[#52525b] leading-relaxed font-normal">
                     {item.description}
                   </p>

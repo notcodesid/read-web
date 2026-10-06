@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import { motion } from "motion/react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 
 interface NavItem {
   label: string;
@@ -19,6 +18,8 @@ const navItems: NavItem[] = [
 ];
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <motion.header
       initial={{ y: -30, opacity: 0 }}
@@ -26,20 +27,13 @@ export default function Header() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none"
     >
-      <div className="pointer-events-auto relative w-full max-w-[700px] flex items-center justify-between rounded-full bg-[#18181b]/90 backdrop-blur-md py-2 pl-4 sm:pl-5 pr-2 shadow-lg shadow-black/10 border border-white/10 transition-all">
+      <div className="pointer-events-auto relative w-full max-w-[700px] flex items-center justify-between rounded-full bg-[#18181b]/90 backdrop-blur-md py-2 pl-6 pr-2 shadow-lg shadow-black/10 border border-white/10 transition-all">
         {/* Brand Logo */}
         <Link
           href="/"
-          className="text-white text-[20px] tracking-tight font-normal select-none flex items-center gap-2.5 hover:opacity-90 transition-opacity"
+          className="text-white text-[21px] tracking-tight font-normal select-none flex items-center hover:opacity-90 transition-opacity"
         >
-          <Image
-            src="/icon.png"
-            alt="Read"
-            width={24}
-            height={24}
-            className="w-6 h-6 rounded-[6px] object-contain select-none shadow-sm"
-          />
-          <span>read</span>
+          Read
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -56,8 +50,8 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Action Button */}
-        <div>
+        {/* Action Button & Mobile Toggle */}
+        <div className="flex items-center gap-2">
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
             <a
               href="https://testflight.apple.com/join/cmbsq8e5"
@@ -71,7 +65,44 @@ export default function Header() {
               </span>
             </a>
           </motion.div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="w-4 h-4" />
+            ) : (
+              <Menu className="w-4 h-4" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.96 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="absolute top-[calc(100%+8px)] left-0 right-0 bg-[#18181b]/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/10 flex flex-col gap-2 md:hidden"
+            >
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-zinc-300 hover:text-white text-[15px] py-2 px-3 rounded-lg hover:bg-white/5 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.header>
   );
