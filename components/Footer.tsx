@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const links = [
@@ -9,7 +10,6 @@ export default function Footer() {
     { label: "Focus", href: "#focus" },
     { label: "Shelf", href: "#shelf" },
     { label: "FAQ", href: "#faq" },
-    { label: "TestFlight", href: "https://testflight.apple.com/join/cmbsq8e5", external: true },
     { label: "Contact", href: "mailto:notcodesid@gmail.com" },
   ];
 
@@ -21,9 +21,16 @@ export default function Footer() {
           <div className="space-y-2">
             <Link
               href="/"
-              className="text-white text-2xl tracking-tight font-normal select-none"
+              className="text-white text-2xl tracking-tight font-normal select-none flex items-center gap-2.5 hover:opacity-90 transition-opacity"
             >
-              Read
+              <Image
+                src="/icon.png"
+                alt="Read"
+                width={28}
+                height={28}
+                className="w-7 h-7 rounded-lg object-contain select-none shadow-sm"
+              />
+              <span>read</span>
             </Link>
             <p className="text-zinc-400 text-sm max-w-md leading-relaxed font-normal">
               Every essay you saved, finally read.
@@ -36,7 +43,6 @@ export default function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                {...(link.external ? { target: "_blank", rel: "noreferrer" } : {})}
                 className="hover:text-white transition-colors"
               >
                 {link.label}
