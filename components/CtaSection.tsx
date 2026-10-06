@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -30,9 +31,18 @@ export default function CtaSection() {
           />
 
           <div className="relative z-10 max-w-2xl space-y-6">
-            <span className="inline-block text-[11px] font-mono tracking-widest uppercase text-zinc-400">
-              / TESTFLIGHT BETA
-            </span>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/icon.png"
+                alt="Read logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-lg object-contain select-none shadow-md"
+              />
+              <span className="inline-block text-[11px] font-mono tracking-widest uppercase text-zinc-400">
+                / TESTFLIGHT BETA
+              </span>
+            </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-[1.08] tracking-[-0.03em] text-white">
               Begin your reading life.
