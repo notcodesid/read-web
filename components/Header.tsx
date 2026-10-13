@@ -71,6 +71,8 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? (
               <X className="w-4 h-4" />
@@ -88,6 +90,7 @@ export default function Header() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.96 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
+              id="mobile-navigation"
               className="absolute top-[calc(100%+8px)] left-0 right-0 bg-[#18181b]/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/10 flex flex-col gap-2 md:hidden"
             >
               {navItems.map((item) => (

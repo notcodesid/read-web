@@ -14,6 +14,7 @@ export default function Home() {
       {/* 1. Nav */}
       <Header />
 
+      <main id="main-content">
       {/* 2. Hero */}
       <Hero />
 
@@ -33,6 +34,7 @@ export default function Home() {
       {/* 8. Final CTA */}
       <CtaSection />
 
+      </main>
       {/* 9. Footer */}
       <Footer />
     </div>

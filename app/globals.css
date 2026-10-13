@@ -26,3 +26,7 @@
 .info-copy li + li { margin-top: .75rem; }
 .info-copy strong { color: #27272a; font-weight: 500; }
 .info-page { overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible { outline: 2px solid #9c5a17; outline-offset: 5px; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 100; background: #18181b; color: white; padding: 12px 20px; border-radius: 20px; }
+.skip-link:focus { top: 12px; }
+html { scroll-padding-top: 100px; }

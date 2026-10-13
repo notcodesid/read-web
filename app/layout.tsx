@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} font-sans antialiased`}>
       <body className="min-h-screen bg-[#f5f4ef] text-[#111b14] selection:bg-zinc-300 selection:text-[#111b14]">
+        <a href="#main-content" className="skip-link">skip to content</a>
         {children}
       </body>
     </html>

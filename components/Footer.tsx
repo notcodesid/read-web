@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Nav & Social Links */}
-          <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-zinc-300">
+          <nav aria-label="footer" className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-zinc-300">
             {links.map((link) => (
               <a
                 key={link.label}
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-mono">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 font-mono">
           <p>© 2026 Read. All rights reserved.</p>
           <p>IPHONE & IPAD · TESTFLIGHT BETA</p>
         </div>

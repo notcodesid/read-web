@@ -54,6 +54,8 @@ export default function FaqSection() {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${idx}`}
                   className="w-full flex items-center justify-between text-left gap-6 group"
                 >
                   <span className="text-base sm:text-lg font-normal text-[#111b14] group-hover:text-black transition-colors">
@@ -75,6 +77,7 @@ export default function FaqSection() {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      id={`faq-answer-${idx}`}
                       className="overflow-hidden"
                     >
                       <p className="pt-3 text-[14.5px] text-[#52525b] leading-relaxed pr-8 font-normal">
