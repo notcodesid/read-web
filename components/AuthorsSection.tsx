@@ -22,7 +22,7 @@ export default function AuthorsSection() {
       name: "Bring your canon",
       icon: Globe,
       description:
-        "Import from Safari, X, or Substack in one tap. Offline-ready with one-tap export anytime.",
+        "Bring public article links from Safari, X, or Substack. Keep saved text ready to read, and export highlights and notes with Read Pro.",
     },
   ];
 

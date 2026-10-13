@@ -39,7 +39,7 @@ export default function CtaSection() {
             </h2>
 
             <p className="text-zinc-300 text-base sm:text-lg font-normal leading-relaxed max-w-xl">
-              Free during the beta. Available now on iPhone and iPad.
+              Try Read on iPhone and iPad through TestFlight. Beta purchases use Apple’s sandbox and do not charge real money.
             </p>
 
             {/* TestFlight Direct Action Button */}

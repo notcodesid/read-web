@@ -25,7 +25,7 @@ export default function FeaturesSection() {
       title: "Collect",
       tag: "CAPTURE ANYWHERE",
       description:
-        "Save any article or link in one tap. Your library builds automatically as you read.",
+        "Save public article links to a personal shelf. Some private or paywalled pages may not be supported.",
       image: collectImg,
     },
     {
@@ -43,7 +43,7 @@ export default function FeaturesSection() {
       title: "Retain",
       tag: "MEMORY & EXPORT",
       description:
-        "Highlight key ideas and export notes directly to Notion or Obsidian.",
+        "Keep the passages that stay with you. Read Pro exports highlights and notes as Markdown to use in apps like Notion or Obsidian.",
       image: notesImg,
     },
   ];

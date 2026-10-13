@@ -28,7 +28,7 @@ export default function FocusSection() {
             </h2>
 
             <p className="text-zinc-400 text-base sm:text-lg max-w-md leading-relaxed font-normal">
-              Set a timer. Screen Time blocks every distraction until you finish.
+              Choose your reading time. With your permission, Screen Time blocks the apps you select for your focus session. Included with Read Pro.
             </p>
           </motion.div>
 
