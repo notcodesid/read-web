@@ -11,10 +11,10 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Features", href: "#features" },
-  { label: "Focus", href: "#focus" },
-  { label: "Shelf", href: "#shelf" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Features", href: "/#features" },
+  { label: "Focus", href: "/#focus" },
+  { label: "Shelf", href: "/#shelf" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export default function Header() {

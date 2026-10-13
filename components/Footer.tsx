@@ -5,12 +5,15 @@ import Link from "next/link";
 
 export default function Footer() {
   const links = [
-    { label: "Features", href: "#features" },
-    { label: "Focus", href: "#focus" },
-    { label: "Shelf", href: "#shelf" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Features", href: "/#features" },
+    { label: "Focus", href: "/#focus" },
+    { label: "Shelf", href: "/#shelf" },
+    { label: "FAQ", href: "/#faq" },
     { label: "TestFlight", href: "https://testflight.apple.com/join/cmbsq8e5", external: true },
-    { label: "Contact", href: "mailto:notcodesid@gmail.com" },
+    { label: "Support", href: "/support" },
+    { label: "Privacy", href: "/privacy" },
+    { label: "Terms", href: "/terms" },
+    { label: "Delete account", href: "/delete-account" },
   ];
 
   return (
