@@ -6,6 +6,7 @@ import AuthorsSection from "@/components/AuthorsSection";
 import FaqSection from "@/components/FaqSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import PlansSection from "@/components/PlansSection";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <AuthorsSection />
 
       {/* 6. FAQ */}
+      <PlansSection />
       <FaqSection />
 
       {/* 8. Final CTA */}
