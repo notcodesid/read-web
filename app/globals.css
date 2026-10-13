@@ -16,3 +16,13 @@
     font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 }
+
+/* Shared help pages keep the quiet editorial rhythm of the landing page. */
+.info-copy a { color: #111b14; text-decoration: underline; text-underline-offset: 4px; }
+.info-copy a:hover { color: #52525b; }
+.info-copy ul, .info-copy ol { padding-left: 1.4rem; }
+.info-copy ul { list-style: disc; }
+.info-copy ol { list-style: decimal; }
+.info-copy li + li { margin-top: .75rem; }
+.info-copy strong { color: #27272a; font-weight: 500; }
+.info-page { overflow-wrap: anywhere; }
