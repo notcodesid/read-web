@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import InfoPage from "@/components/InfoPage";
 import { supportSections, updated } from "@/lib/info-content";
 
-export const metadata: Metadata = { title: "Support — Read", description: "from your first saved essay to a question about your subscription, you’re in the right place." };
+export const metadata: Metadata = { title: "Support", description: "from your first saved essay to a question about your subscription, you’re in the right place.", alternates: { canonical: "/support" } };
 
 export default function Page() {
   return (
