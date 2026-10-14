@@ -45,7 +45,7 @@ export default function InfoPage({ path, eyebrow, title, intro, sections, childr
                 <h2 className="text-2xl sm:text-[28px] font-normal tracking-tight mb-5">{section.title}</h2>
                 <div className="info-copy text-base leading-[1.8] text-zinc-600 space-y-4">{section.content}</div>
               </section>)}
-              <div className="pt-8 text-sm text-zinc-600">still have a question? <a href="mailto:notcodesid@gmail.com">write to us →</a></div>
+              <div className="pt-8 text-sm text-zinc-600">still have a question? <a href="mailto:notcodesid@gmail.com" aria-label="Email Read support">write to us →</a></div>
             </div>
           </div>
         </div>
