@@ -58,15 +58,15 @@ export default function FaqSection() {
                   aria-controls={`faq-answer-${idx}`}
                   className="w-full flex items-center justify-between text-left gap-6 group"
                 >
-                  <span className="text-base sm:text-lg font-normal text-[#111b14] group-hover:text-black transition-colors">
+                  <h3 id={`faq-q-${idx}`} className="text-base sm:text-lg font-normal text-[#111b14] group-hover:text-black transition-colors">
                     {faq.q}
-                  </span>
+                  </h3>
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                     className="w-7 h-7 rounded-full bg-[#e8e4d9] group-hover:bg-[#18181b] group-hover:text-white flex items-center justify-center shrink-0 transition-colors text-[#111b14]"
                   >
-                    <Plus className="w-3.5 h-3.5 stroke-[2]" />
+                    <Plus aria-hidden="true" className="w-3.5 h-3.5 stroke-[2]" />
                   </motion.span>
                 </button>
 
