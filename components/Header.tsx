@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
   { label: "Features", href: "/#features" },
   { label: "Focus", href: "/#focus" },
   { label: "Shelf", href: "/#shelf" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/#faq" },
 ];
 
@@ -37,7 +38,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav aria-label="primary" className="hidden md:flex items-center gap-7">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -56,12 +57,12 @@ export default function Header() {
             <a
               href="https://testflight.apple.com/join/cmbsq8e5"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="group flex items-center gap-2.5 bg-[#f5f4ef] hover:bg-white text-[#111b14] pl-4 pr-1.5 py-1.5 rounded-full text-[13.5px] font-medium transition-all duration-200 shadow-sm"
             >
               <span>Get early access</span>
               <span className="w-7 h-7 rounded-[8px] bg-[#18181b] group-hover:bg-black text-white flex items-center justify-center transition-colors">
-                <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight aria-hidden="true" className="w-3.5 h-3.5 stroke-[2.2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </span>
             </a>
           </motion.div>
@@ -75,9 +76,9 @@ export default function Header() {
             aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? (
-              <X className="w-4 h-4" />
+              <X aria-hidden="true" className="w-4 h-4" />
             ) : (
-              <Menu className="w-4 h-4" />
+              <Menu aria-hidden="true" className="w-4 h-4" />
             )}
           </button>
         </div>

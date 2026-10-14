@@ -8,6 +8,7 @@ export default function Footer() {
     { label: "Features", href: "/#features" },
     { label: "Focus", href: "/#focus" },
     { label: "Shelf", href: "/#shelf" },
+    { label: "Blog", href: "/blog" },
     { label: "FAQ", href: "/#faq" },
     { label: "TestFlight", href: "https://testflight.apple.com/join/cmbsq8e5", external: true },
     { label: "Support", href: "/support" },
@@ -35,16 +36,27 @@ export default function Footer() {
 
           {/* Nav & Social Links */}
           <nav aria-label="footer" className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-zinc-300">
-            {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                {...(link.external ? { target: "_blank", rel: "noreferrer" } : {})}
-                className="hover:text-white transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map((link) =>
+              link.external ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="hover:text-white transition-colors"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
         </div>
 
