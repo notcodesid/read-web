@@ -43,8 +43,8 @@ export default function FocusSection() {
             <div className="relative w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[620px] xl:max-w-[680px] flex justify-center scale-105 sm:scale-115 lg:scale-125 transition-transform duration-300">
               <Image
                 src={focusModalImg}
-                alt="Apple Screen Time Reading Focus Modal on iPhone"
-                priority
+                alt="Read Locked In focus session using Apple Screen Time block on iPhone"
+                sizes="(max-width: 768px) 100vw, 640px"
                 className="w-full h-auto object-contain select-none drop-shadow-[0_28px_60px_rgba(0,0,0,0.6)]"
               />
             </div>

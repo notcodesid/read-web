@@ -48,12 +48,12 @@ export default function CtaSection() {
                 <a
                   href="https://testflight.apple.com/join/cmbsq8e5"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-3 bg-[#f5f4ef] hover:bg-white text-[#18181b] pl-7 pr-2.5 py-3 rounded-full text-base font-medium transition-all shadow-md"
                 >
                   <span>Join TestFlight beta</span>
                   <span className="w-8 h-8 rounded-[8px] bg-[#18181b] group-hover:bg-black text-white flex items-center justify-center transition-colors">
-                    <ArrowUpRight className="w-4 h-4 stroke-[2.2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight aria-hidden="true" className="w-4 h-4 stroke-[2.2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </a>
               </motion.div>

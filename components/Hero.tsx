@@ -46,7 +46,7 @@ export default function Hero() {
             >
               <Image
                 src={angledMockup}
-                alt="Read app running on iPhone"
+                alt="Read minimalist essay reader app running on iPhone"
                 priority
                 quality={100}
                 sizes="(max-width: 768px) 280px, 340px"
@@ -84,12 +84,12 @@ export default function Hero() {
               <a
                 href="https://testflight.apple.com/join/cmbsq8e5"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="group w-full inline-flex items-center justify-between gap-3 bg-[#18181b] hover:bg-black text-[#f5f4ef] pl-6 pr-2.5 py-3 rounded-full text-[14.5px] font-medium transition-all duration-200 shadow-md hover:shadow-xl"
               >
                 <span>Join TestFlight beta</span>
                 <span className="w-7 h-7 rounded-[8px] bg-[#f5f4ef] text-[#18181b] flex items-center justify-center transition-colors">
-                  <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight aria-hidden="true" className="w-3.5 h-3.5 stroke-[2.2] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </a>
             </motion.div>

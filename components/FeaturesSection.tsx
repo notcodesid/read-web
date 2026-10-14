@@ -10,11 +10,12 @@ import collectImg from "@/public/device-mockup_1.5x_postspark_2026-10-06_01-02-3
 
 interface StepItem {
   step: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean | "true" | "false" }>;
   title: string;
   tag: string;
   description: string;
   image?: StaticImageData;
+  imageAlt?: string;
 }
 
 export default function FeaturesSection() {
@@ -27,6 +28,7 @@ export default function FeaturesSection() {
       description:
         "Save public article links to a personal shelf. Some private or paywalled pages may not be supported.",
       image: collectImg,
+      imageAlt: "Read app collection shelf saving an article on iPhone",
     },
     {
       step: "02",
@@ -36,6 +38,7 @@ export default function FeaturesSection() {
       description:
         "Paperback typography and offline reading. Zero ads, popups, or distractions.",
       image: readImg,
+      imageAlt: "Read app clean paperback reading view on iPhone",
     },
     {
       step: "03",
@@ -45,6 +48,7 @@ export default function FeaturesSection() {
       description:
         "Keep the passages that stay with you. Read Pro exports highlights and notes as Markdown to use in apps like Notion or Obsidian.",
       image: notesImg,
+      imageAlt: "Read app notes and highlights export view on iPhone",
     },
   ];
 
@@ -92,8 +96,8 @@ export default function FeaturesSection() {
                       <div className="w-full px-8 flex justify-center">
                         <Image
                           src={item.image}
-                          alt="Notes & Highlights preview"
-                          priority
+                          alt={item.imageAlt ?? `${item.title} step preview in Read app`}
+                          sizes="(max-width: 768px) 100vw, 400px"
                           className="w-full h-auto object-contain select-none"
                         />
                       </div>
@@ -101,7 +105,7 @@ export default function FeaturesSection() {
                   ) : (
                     <div className="flex items-center justify-between">
                       <div className="w-11 h-11 rounded-2xl bg-[#18181b] text-[#f5f4ef] flex items-center justify-center shadow-sm">
-                        <Icon className="w-5 h-5 stroke-[2]" />
+                        <Icon aria-hidden="true" className="w-5 h-5 stroke-[2]" />
                       </div>
                       <span className="text-[12px] font-mono font-medium text-zinc-500">
                         {item.step}
