@@ -46,7 +46,7 @@ export default function FeaturesSection() {
       title: "Retain",
       tag: "MEMORY & EXPORT",
       description:
-        "Keep the passages that stay with you. Read Pro exports highlights and notes as Markdown to use in apps like Notion or Obsidian.",
+        "Keep the passages that stay with you. Export highlights and notes as Markdown to use in apps like Notion or Obsidian.",
       image: notesImg,
       imageAlt: "Read app notes and highlights export view on iPhone",
     },

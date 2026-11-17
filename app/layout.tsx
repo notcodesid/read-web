@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s — Read",
   },
   description:
-    "A minimal, distraction-free reading app for long-form ideas, essays, and curated thinkers. Emulating paperback reading with Screen Time focus lock and cloud sync.",
+    "A minimal, distraction-free reading app for long-form ideas, essays, and curated thinkers. Paperback-style reading, a Lock In timer that pauses distracting apps, and your library backed up across devices. Free.",
   applicationName: "Read",
   authors: [{ name: "Sid", url: SITE_URL }],
   creator: "Sid",

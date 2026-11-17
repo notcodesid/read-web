@@ -69,10 +69,10 @@ export default function Home() {
       },
       {
         "@type": "Question",
-        name: "How does Focus Lock work?",
+        name: "How does Lock In work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Choose a duration and the apps, categories, or websites you want to restrict. With Screen Time permission, Read Pro blocks those selections during your session.",
+          text: "Choose how long you want to read. If you allow Screen Time access and pick apps, categories, or websites, Read pauses them until the timer ends; otherwise it is a plain reading timer. It does not silence every notification, and you can end the session early in Read.",
         },
       },
       {
@@ -80,7 +80,7 @@ export default function Home() {
         name: "Does Read work offline?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Saved text can be read offline after importing. You need internet access to import new articles or sync.",
+          text: "Saved text can be read offline after importing. You need internet access to import new articles or back up your library.",
         },
       },
       {
@@ -88,7 +88,7 @@ export default function Home() {
         name: "Can I export my highlights and notes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Read Pro exports highlights and notes as a Markdown file through the iOS share sheet.",
+          text: "Yes. Read exports highlights and notes as a Markdown file through the iOS share sheet. You can import the file into apps such as Notion or Obsidian; it does not connect automatically to those accounts.",
         },
       },
     ],
@@ -121,7 +121,7 @@ export default function Home() {
       {/* 3. How it works */}
       <FeaturesSection />
 
-      {/* 4. Focus Lock */}
+      {/* 4. Lock In */}
       <FocusSection />
 
       {/* 5. The personal shelf */}

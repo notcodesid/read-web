@@ -13,16 +13,16 @@ export default function FaqSection() {
       a: "Paste a public article link and Read will try to extract a clean reading view. Some websites, private pages, and paywalled articles are not supported. Read does not bypass publisher access restrictions.",
     },
     {
-      q: "How does Focus Lock work?",
-      a: "Choose a duration and the apps, categories, or websites you want to restrict. With Screen Time permission, Read Pro blocks those selections during your session. It does not silence every notification, and you can end the session in Read.",
+      q: "How does Lock In work?",
+      a: "Choose how long you want to read. If you allow Screen Time access and pick apps, categories, or websites, Read pauses them until the timer ends; otherwise it is a plain reading timer. It does not silence every notification, and you can end the session early in Read.",
     },
     {
       q: "Does Read work offline?",
-      a: "Saved text can be read offline after importing. You need internet access to import new articles or sync; external images and links may still need a connection. Open your article once before travelling to check it is ready.",
+      a: "Saved text can be read offline after importing. You need internet access to import new articles or back up your library; external images and links may still need a connection. Open your article once before travelling to check it is ready.",
     },
     {
       q: "Can I export my highlights and notes?",
-      a: "Read Pro exports highlights and notes as a Markdown file through the iOS share sheet. You can import the file into apps such as Notion or Obsidian; it does not connect automatically to those accounts.",
+      a: "Yes. Read exports highlights and notes as a Markdown file through the iOS share sheet. You can import the file into apps such as Notion or Obsidian; it does not connect automatically to those accounts.",
     },
   ];
 
