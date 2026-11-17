@@ -28,7 +28,7 @@ export default function FocusSection() {
             </h2>
 
             <p className="text-zinc-400 text-base sm:text-lg max-w-md leading-relaxed font-normal">
-              Choose your reading time. With your permission, Screen Time blocks the apps you select for your focus session. Included with Read Pro.
+              Choose your reading time. With your permission, Screen Time pauses the apps you select until the timer ends. Free, like everything in Read.
             </p>
           </motion.div>
 
