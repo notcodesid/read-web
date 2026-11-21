@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "motion/react";
-import focusModalImg from "@/public/iPhone Reading Focus Mockup.png";
+import PhoneFrame from "@/components/PhoneFrame";
+import lockInShot from "@/public/app/lock-in.webp";
+import everyDayShot from "@/public/app/every-day.webp";
 
 export default function FocusSection() {
   return (
@@ -40,12 +41,16 @@ export default function FocusSection() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex justify-center py-4"
           >
-            <div className="relative w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[620px] xl:max-w-[680px] flex justify-center scale-105 sm:scale-115 lg:scale-125 transition-transform duration-300">
-              <Image
-                src={focusModalImg}
-                alt="Read Locked In focus session using Apple Screen Time block on iPhone"
-                sizes="(max-width: 768px) 100vw, 640px"
-                className="w-full h-auto object-contain select-none drop-shadow-[0_28px_60px_rgba(0,0,0,0.6)]"
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full max-w-[520px]">
+              <PhoneFrame
+                src={lockInShot}
+                alt="The Lock In sheet in Read: choose 25 minutes, choose distracting apps, start session"
+                className="w-full"
+              />
+              <PhoneFrame
+                src={everyDayShot}
+                alt="Read's Every Day screen: a daily reading time at 9:30 PM for 20 minutes"
+                className="w-full mt-10 sm:mt-16"
               />
             </div>
           </motion.div>

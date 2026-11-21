@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
-import angledMockup from "@/public/Angled iPhone Collection App Mockup.png";
+import PhoneFrame from "@/components/PhoneFrame";
+import homeShot from "@/public/app/home.webp";
 
 export default function Hero() {
   return (
@@ -44,13 +44,11 @@ export default function Hero() {
               whileHover={{ scale: 1.025, y: -6 }}
               className="transition-transform duration-300 cursor-pointer"
             >
-              <Image
-                src={angledMockup}
-                alt="Read minimalist essay reader app running on iPhone"
+              <PhoneFrame
+                src={homeShot}
+                alt="Read's Home screen on iPhone: Today's read, How to Earn a Billion Dollars by Paul Graham, 10 minutes left, picked for 15 minutes"
                 priority
-                quality={100}
-                sizes="(max-width: 768px) 280px, 340px"
-                className="w-full h-auto select-none drop-shadow-[0_28px_50px_rgba(0,0,0,0.18)] drop-shadow-[0_8px_16px_rgba(0,0,0,0.06)]"
+                className="w-[230px] sm:w-[250px] md:w-[265px] lg:w-[275px] mx-auto"
               />
             </motion.div>
           </motion.div>

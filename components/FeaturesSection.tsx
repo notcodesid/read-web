@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import Image, { type StaticImageData } from "next/image";
+import { type StaticImageData } from "next/image";
 import { Bookmark, BookOpen, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
-import notesImg from "@/public/notes.png";
-import readImg from "@/public/read.png";
-import collectImg from "@/public/device-mockup_1.5x_postspark_2026-10-06_01-02-35.png";
+import PhoneFrame from "@/components/PhoneFrame";
+import notesImg from "@/public/app/notes.webp";
+import readImg from "@/public/app/display.webp";
+import collectImg from "@/public/app/add-link.webp";
 
 interface StepItem {
   step: string;
@@ -28,7 +29,7 @@ export default function FeaturesSection() {
       description:
         "Share any public article, post or thread into Read, or paste the link. Some private or paywalled pages may not be supported.",
       image: collectImg,
-      imageAlt: "Read app collection shelf saving an article on iPhone",
+      imageAlt: "Read's Add Link screen: paste a link and save just the article",
     },
     {
       step: "02",
@@ -38,7 +39,7 @@ export default function FeaturesSection() {
       description:
         "Paperback typography, scroll or turn pages, six themes, and offline reading. Zero ads, popups, or distractions.",
       image: readImg,
-      imageAlt: "Read app clean paperback reading view on iPhone",
+      imageAlt: "An essay in Read with a highlighted passage and the display panel: text size, six themes, scroll or pages, serif or sans",
     },
     {
       step: "03",
@@ -48,7 +49,7 @@ export default function FeaturesSection() {
       description:
         "Highlight the passages that stay with you and add notes. Export them as Markdown for apps like Notion or Obsidian.",
       image: notesImg,
-      imageAlt: "Read app notes and highlights export view on iPhone",
+      imageAlt: "Read's Notes tab with a highlighted passage from Founder Mode and a note under it",
     },
   ];
 
@@ -92,15 +93,13 @@ export default function FeaturesSection() {
               >
                 <div className="space-y-6">
                   {item.image ? (
-                    <div className="relative -mx-8 -mt-6 sm:-mt-8 border-b border-black/10 flex flex-col items-center">
-                      <div className="w-full px-8 flex justify-center">
-                        <Image
-                          src={item.image}
-                          alt={item.imageAlt ?? `${item.title} step preview in Read app`}
-                          sizes="(max-width: 768px) 100vw, 400px"
-                          className="w-full h-auto object-contain select-none"
-                        />
-                      </div>
+                    <div className="relative -mx-8 -mt-8 rounded-t-3xl bg-[#e3dfd3] border-b border-black/10 flex justify-center pt-8 overflow-hidden">
+                      <PhoneFrame
+                        src={item.image}
+                        alt={item.imageAlt ?? `${item.title} in the Read app`}
+                        crop={0.62}
+                        className="w-[68%] max-w-[250px]"
+                      />
                     </div>
                   ) : (
                     <div className="flex items-center justify-between">

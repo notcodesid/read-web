@@ -3,6 +3,9 @@
 import React from "react";
 import { BookMarked, Sparkles, Globe } from "lucide-react";
 import { motion } from "motion/react";
+import PhoneFrame from "@/components/PhoneFrame";
+import collectionShot from "@/public/app/collection.webp";
+import layoutsShot from "@/public/app/collection-layouts.webp";
 
 export default function AuthorsSection() {
   const shelfFeatures = [
@@ -49,6 +52,18 @@ export default function AuthorsSection() {
           <p className="text-[#52525b] text-[15px] sm:text-[16px] max-w-md leading-relaxed font-normal">
             Start with a clean slate. Your library and author shelves build automatically as you save.
           </p>
+        </motion.div>
+
+        {/* Real screens from the app */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-2 gap-4 sm:gap-8 max-w-[640px] mx-auto pb-12 sm:pb-16"
+        >
+          <PhoneFrame src={collectionShot} alt="Read's Collection in Gallery view: Paul Graham, Autotranslucence and Noah Zender" crop={0.5} className="w-full" />
+          <PhoneFrame src={layoutsShot} alt="Collection's view menu: Gallery, Grid or List, sorted by Recent, Name or Most Articles" crop={0.5} className="w-full sm:mt-12" />
         </motion.div>
 
         {/* 3 Shelf Cards */}

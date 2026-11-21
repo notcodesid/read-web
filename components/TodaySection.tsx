@@ -3,6 +3,9 @@
 import React from "react";
 import { Clock, LayoutGrid, BellRing } from "lucide-react";
 import { motion } from "motion/react";
+import PhoneFrame from "@/components/PhoneFrame";
+import homeShot from "@/public/app/home.webp";
+import widgetShot from "@/public/app/widget.webp";
 
 export default function TodaySection() {
   const shelfFeatures = [
@@ -51,7 +54,19 @@ export default function TodaySection() {
           </p>
         </motion.div>
 
-        {/* 3 Shelf Cards */}
+        {/* Real screens from the app */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-2 gap-4 sm:gap-8 max-w-[640px] mx-auto pb-12 sm:pb-16"
+        >
+          <PhoneFrame src={homeShot} alt="Read's Home: I have 5, 15 or 30 min, and Today's read picked to fit" crop={0.62} className="w-full" />
+          <PhoneFrame src={widgetShot} alt="The Today's read widget on the iPhone Home Screen, in medium and small sizes" crop={0.62} className="w-full sm:mt-12" />
+        </motion.div>
+
+        {/* 3 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {shelfFeatures.map((item, idx) => {
             const Icon = item.icon;
