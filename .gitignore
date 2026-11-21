@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# The public analytics key (see .env.production) is safe to commit.
+!.env.production

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/next";
+import SectionViews from "@/components/SectionViews";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -72,7 +72,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-[#f5f4ef] text-[#111b14] selection:bg-zinc-300 selection:text-[#111b14]">
         <a href="#main-content" className="skip-link">skip to content</a>
         {children}
-        <Analytics />
+        <SectionViews />
       </body>
     </html>
   );

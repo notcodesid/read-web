@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Plus } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { track } from "@/lib/analytics";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -61,7 +62,10 @@ export default function FaqSection() {
               <div key={faq.q} className="py-5 sm:py-6">
                 <button
                   type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  onClick={() => {
+                    if (!isOpen) track("faq_opened", { question: faq.q });
+                    setOpenIndex(isOpen ? null : idx);
+                  }}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${idx}`}
                   className="w-full flex items-center justify-between text-left gap-6 group"
