@@ -16,13 +16,13 @@ export default function AuthorsSection() {
       name: "Author shelves",
       icon: BookMarked,
       description:
-        "Save pieces from your favorite writers. Read automatically organizes them into dedicated shelves.",
+        "Every writer you save gets a shelf of their own. Browse them as a gallery, a grid, or a list, sorted the way you like.",
     },
     {
       name: "Bring your canon",
       icon: Globe,
       description:
-        "Bring public article links from Safari, X, or Substack. Keep saved text ready to read, and export your highlights and notes whenever you like.",
+        "Share a link from Safari, X, Substack or Medium straight into Read. Saved text stays ready offline, and your highlights and notes export whenever you like.",
     },
   ];
 
@@ -39,7 +39,7 @@ export default function AuthorsSection() {
         >
           <div className="space-y-3 max-w-2xl">
             <div className="flex items-center gap-2 text-[11px] font-mono tracking-widest text-[#71717a] uppercase">
-              <span>[03]</span>
+              <span>[04]</span>
               <span>/ YOUR PERSONAL SHELF</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-[-0.03em] text-[#111b14] leading-[1.12]">

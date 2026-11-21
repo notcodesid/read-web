@@ -26,7 +26,7 @@ export default function FeaturesSection() {
       title: "Collect",
       tag: "CAPTURE ANYWHERE",
       description:
-        "Save public article links to a personal shelf. Some private or paywalled pages may not be supported.",
+        "Share any public article, post or thread into Read, or paste the link. Some private or paywalled pages may not be supported.",
       image: collectImg,
       imageAlt: "Read app collection shelf saving an article on iPhone",
     },
@@ -36,7 +36,7 @@ export default function FeaturesSection() {
       title: "Read",
       tag: "PAPERBACK CALM",
       description:
-        "Paperback typography and offline reading. Zero ads, popups, or distractions.",
+        "Paperback typography, scroll or turn pages, six themes, and offline reading. Zero ads, popups, or distractions.",
       image: readImg,
       imageAlt: "Read app clean paperback reading view on iPhone",
     },
@@ -46,7 +46,7 @@ export default function FeaturesSection() {
       title: "Retain",
       tag: "MEMORY & EXPORT",
       description:
-        "Keep the passages that stay with you. Export highlights and notes as Markdown to use in apps like Notion or Obsidian.",
+        "Highlight the passages that stay with you and add notes. Export them as Markdown for apps like Notion or Obsidian.",
       image: notesImg,
       imageAlt: "Read app notes and highlights export view on iPhone",
     },

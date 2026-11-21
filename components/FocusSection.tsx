@@ -19,8 +19,8 @@ export default function FocusSection() {
             className="lg:col-span-6 space-y-5"
           >
             <div className="flex items-center gap-2 text-[11px] font-mono tracking-widest text-zinc-400 uppercase">
-              <span>[02]</span>
-              <span>/ FOCUS LOCK</span>
+              <span>[03]</span>
+              <span>/ LOCK IN</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-[46px] lg:text-[50px] font-normal tracking-[-0.035em] text-white leading-[1.12]">
@@ -28,7 +28,7 @@ export default function FocusSection() {
             </h2>
 
             <p className="text-zinc-400 text-base sm:text-lg max-w-md leading-relaxed font-normal">
-              Choose your reading time. With your permission, Screen Time pauses the apps you select until the timer ends. Free, like everything in Read.
+              Start a Lock In session and Screen Time pauses the apps you choose until the timer ends. Set a daily reading time and it happens by itself. Or turn on Read to Unlock: your chosen apps stay paused, and every minute you read earns two minutes with them. Free, like everything in Read.
             </p>
           </motion.div>
 

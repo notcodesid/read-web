@@ -13,8 +13,16 @@ export default function FaqSection() {
       a: "Paste a public article link and Read will try to extract a clean reading view. Some websites, private pages, and paywalled articles are not supported. Read does not bypass publisher access restrictions.",
     },
     {
+      q: "What is Today's read?",
+      a: "Each day Read picks one unfinished piece from your own library that fits the time you say you have: 5, 15 or 30 minutes. A piece you have already started comes first. It also appears in the Home Screen and Lock Screen widget.",
+    },
+    {
       q: "How does Lock In work?",
-      a: "Choose how long you want to read. If you allow Screen Time access and pick apps, categories, or websites, Read pauses them until the timer ends; otherwise it is a plain reading timer. It does not silence every notification, and you can end the session early in Read.",
+      a: "Choose how long you want to read. If you allow Screen Time access and pick apps, categories, or websites, Read pauses them until the timer ends; otherwise it is a plain reading timer. You can also set a daily reading time, and Read reminds you and pauses those apps by itself every day. It does not silence every notification, and you can end a session early in Read.",
+    },
+    {
+      q: "What is Read to Unlock?",
+      a: "An optional mode for people who want help putting the phone down. The apps you choose stay paused, and every minute you read in Read earns two minutes with them, up to 60 a day. Screen Time pauses them again once the time is used, and you can turn it off for the day or for good whenever you like.",
     },
     {
       q: "Does Read work offline?",

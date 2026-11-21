@@ -69,7 +69,7 @@ export default function Hero() {
               Every essay you saved, finally read.
             </h1>
             <p className="mt-6 text-[15px] sm:text-[16px] text-[#52525b] leading-relaxed font-normal">
-              Bring the public articles you love. Read saved text offline in calm paperback typography. Make room to focus, at your own pace.
+              Save the articles you love. Each day Read picks one that fits the time you have, sets it in calm paperback typography, and keeps your other apps out of the way while you read.
             </p>
           </motion.div>
 
