@@ -6,7 +6,8 @@ import Link from "next/link";
 export default function Footer() {
   const links = [
     { label: "Features", href: "/#features" },
-    { label: "Focus", href: "/#focus" },
+    { label: "Today", href: "/#today" },
+    { label: "Lock In", href: "/#focus" },
     { label: "Shelf", href: "/#shelf" },
     { label: "Blog", href: "/blog" },
     { label: "FAQ", href: "/#faq" },

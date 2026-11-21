@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import FeaturesSection from "@/components/FeaturesSection";
 import FocusSection from "@/components/FocusSection";
 import AuthorsSection from "@/components/AuthorsSection";
+import TodaySection from "@/components/TodaySection";
 import FaqSection from "@/components/FaqSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
@@ -12,12 +13,12 @@ import PlansSection from "@/components/PlansSection";
 export const metadata: Metadata = {
   title: "Read — A Minimalist Long-Form Essay & Article Reader",
   description:
-    "Save anything, read it clean, and finish with Locked In mode. Read is a quiet home for essays, articles, and ideas.",
+    "Save the articles you love and read one a day, picked for the time you have. Calm paperback typography, highlights and notes, and Lock In to keep other apps away while you read.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Read — A Minimalist Long-Form Essay & Article Reader",
     description:
-      "Save anything, read it clean, and finish with Locked In mode. Read is a quiet home for essays, articles, and ideas.",
+      "Save the articles you love and read one a day, picked for the time you have. Calm paperback typography, highlights and notes, and Lock In to keep other apps away while you read.",
     url: "/",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Read — every essay you saved, finally read" }],
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Read — A Minimalist Long-Form Essay & Article Reader",
     description:
-      "Save anything, read it clean, and finish with Locked In mode. Read is a quiet home for essays, articles, and ideas.",
+      "Save the articles you love and read one a day, picked for the time you have. Calm paperback typography, highlights and notes, and Lock In to keep other apps away while you read.",
     images: ["https://read.notcodesid.com/og.png"],
   },
 };
@@ -69,11 +70,21 @@ export default function Home() {
       },
       {
         "@type": "Question",
+        name: "What is Today's read?",
+        acceptedAnswer: { "@type": "Answer", text: "Each day Read picks one unfinished piece from your own library that fits the time you say you have: 5, 15 or 30 minutes. A piece you have already started comes first. It also appears in the Home Screen and Lock Screen widget." },
+      },
+      {
+        "@type": "Question",
         name: "How does Lock In work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Choose how long you want to read. If you allow Screen Time access and pick apps, categories, or websites, Read pauses them until the timer ends; otherwise it is a plain reading timer. It does not silence every notification, and you can end the session early in Read.",
+          text: "Choose how long you want to read. If you allow Screen Time access and pick apps, categories, or websites, Read pauses them until the timer ends; otherwise it is a plain reading timer. You can also set a daily reading time, and Read reminds you and pauses those apps by itself every day. It does not silence every notification, and you can end a session early in Read.",
         },
+      },
+      {
+        "@type": "Question",
+        name: "What is Read to Unlock?",
+        acceptedAnswer: { "@type": "Answer", text: "An optional mode for people who want help putting the phone down. The apps you choose stay paused, and every minute you read in Read earns two minutes with them, up to 60 a day. Screen Time pauses them again once the time is used, and you can turn it off for the day or for good whenever you like." },
       },
       {
         "@type": "Question",
@@ -121,13 +132,16 @@ export default function Home() {
       {/* 3. How it works */}
       <FeaturesSection />
 
-      {/* 4. Lock In */}
+      {/* 4. Today's read */}
+      <TodaySection />
+
+      {/* 5. Lock In */}
       <FocusSection />
 
-      {/* 5. The personal shelf */}
+      {/* 6. The personal shelf */}
       <AuthorsSection />
 
-      {/* 6. FAQ */}
+      {/* 7. Plans and FAQ */}
       <PlansSection />
       <FaqSection />
 

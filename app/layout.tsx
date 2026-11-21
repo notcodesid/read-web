@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     siteName: "Read",
     title: "Read — A Minimalist Long-Form Essay & Article Reader",
     description:
-      "Save anything, read it clean, and finish with Locked In mode. A quiet home for essays and articles.",
+      "Save the articles you love and read one a day, picked for the time you have. A quiet home for essays and articles.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Read — every essay you saved, finally read" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Read — A Minimalist Long-Form Essay & Article Reader",
     description:
-      "Save anything, read it clean, and finish with Locked In mode. A quiet home for essays and articles.",
+      "Save the articles you love and read one a day, picked for the time you have. A quiet home for essays and articles.",
     images: [`${SITE_URL}/og.png`],
   },
   robots: {

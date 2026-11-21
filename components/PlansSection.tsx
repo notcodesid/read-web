@@ -16,7 +16,7 @@ export default function PlansSection() {
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { name: "reading", detail: "a quiet place to begin", items: ["save articles, posts, and threads to your shelf", "fonts, themes, and pages that suit you", "highlight passages and keep notes"] },
-              { name: "keeping", detail: "included too", items: ["Lock In with app pausing", "your library backed up across devices", "contents, search, bookmarks, and Markdown exports"] },
+              { name: "keeping", detail: "included too", items: ["Lock In, a daily reading time, and Read to Unlock", "your library backed up across devices", "Today's read, the widget, and Markdown exports"] },
             ].map((plan, index) => <div key={plan.name} className={`rounded-3xl p-7 sm:p-8 ${index ? "bg-[#18181b] text-[#f5f4ef]" : "bg-[#f5f4ef]"}`}>
               <p className={`text-xs font-mono mb-5 ${index ? "text-zinc-400" : "text-zinc-600"}`}>{plan.detail}</p>
               <h3 className="text-3xl tracking-tight mb-6">{plan.name}</h3>
